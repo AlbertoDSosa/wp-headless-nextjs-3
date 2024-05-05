@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import { auth } from '@/server/auth';
 import { redirect } from 'next/navigation';
 
-export default async function SigninPage({}) {
+export default async function SigninPage() {
   const session = await auth();
 
   if (session?.user) {
