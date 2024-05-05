@@ -11,7 +11,7 @@ export default async function SigninPage() {
   }
 
   const cookieStore = cookies();
-  const csrfToken = cookieStore.get('next-auth.csrf-token');
+  const csrfToken = cookieStore.get('authjs.csrf-token');
 
   return <Signin csrfToken={csrfToken?.value} />;
 }
