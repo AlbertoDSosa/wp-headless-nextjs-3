@@ -9,6 +9,8 @@ export const signIn = async (state, form) => {
   } catch (error) {
     if (error instanceof AuthError) {
       return {
+        ...state,
+        status: 'error',
         message: 'Incorrect email or password',
       };
     }

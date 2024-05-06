@@ -1,15 +1,4 @@
-import { WP_BACK_URL, AUTH_SECRET } from '@/utils/constants';
-import { getToken } from 'next-auth/jwt';
-
-export const getAccessToken = async ({ req }) => {
-  const token = await getToken({ req, secret: AUTH_SECRET });
-
-  if (!token) {
-    return null;
-  }
-
-  return token.accessToken;
-};
+import { WP_BACK_URL } from '@/utils/constants';
 
 export const wpAuth = async ({ email, password }) => {
   const respUser = await fetch(`${WP_BACK_URL}/wp-json/jwt-auth/v1/token`, {

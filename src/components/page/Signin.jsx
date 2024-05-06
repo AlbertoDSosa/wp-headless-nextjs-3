@@ -4,6 +4,8 @@ import { useFormState } from 'react-dom';
 import { signIn } from '@/app/actions/auth';
 
 const initialState = {
+  form: 'signin',
+  status: 'initial',
   message: '',
 };
 
