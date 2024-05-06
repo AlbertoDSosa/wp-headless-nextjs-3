@@ -7,7 +7,7 @@ export default async function SigninPage() {
   const session = await auth();
 
   if (session?.user) {
-    return redirect('/dashboard', 'replace');
+    return redirect('/dashboard');
   }
 
   const cookieStore = cookies();
